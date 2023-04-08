@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1250.0" styleClass="primary-background" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Auths.SignIn.SignInController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="1250.0">
+         <children>
+            <Label layoutX="765.0" layoutY="433.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button layoutX="77.0" layoutY="106.0" mnemonicParsing="false" opacity="0.33" prefHeight="486.0" prefWidth="501.0" styleClass="auth-container" stylesheets="@../../style.css" textFill="#252020" />
+      <TextField fx:id="usernameTF" layoutX="134.0" layoutY="275.0" prefHeight="42.0" prefWidth="386.0" promptText="Username">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="134.0" layoutY="417.0" mnemonicParsing="false" onAction="#handleSignIn" prefHeight="0.0" prefWidth="386.0" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="SIGN IN" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="134.0" layoutY="483.0" text="Not  have an account?" textFill="#f8f8f8">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordTF" layoutX="134.0" layoutY="332.0" prefHeight="42.0" prefWidth="386.0" promptText="Password">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </PasswordField>
+      <Button layoutX="265.0" layoutY="478.0" mnemonicParsing="false" onAction="#switchToSignUp" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign up here." textFill="WHITE" underline="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="134.0" layoutY="138.0" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="635.0" layoutY="282.0" prefHeight="55.0" prefWidth="512.0" text="&quot;Police officers are not just " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="645.0" layoutY="336.0" prefHeight="55.0" prefWidth="511.0" text="law enforcers, they are also " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="645.0" layoutY="393.0" prefHeight="55.0" prefWidth="442.0" text="problem solvers, peacekeepers" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="649.0" layoutY="452.0" prefHeight="31.0" prefWidth="436.0" text="and guardians of our communities.&quot;" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="645.0" layoutY="131.0" prefHeight="55.0" prefWidth="546.0" text="Welcome to Police Station" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

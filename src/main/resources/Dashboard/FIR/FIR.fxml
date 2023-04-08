@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="631.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.FIR.FIRController">
+   <children>
+      <BorderPane prefHeight="631.0" prefWidth="1014.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1018.0" spacing="490.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <SplitMenuButton fx:id="FIROptionBtn" mnemonicParsing="false" onAction="#handleFIROptionBtn" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="Option">
+                     <items>
+                        <MenuItem fx:id="AddFIRBtn" mnemonicParsing="false" onAction="#handleAddFIRBtn" text="Add FIR" />
+                        <MenuItem fx:id="SearchFIRBtn" mnemonicParsing="false" onAction="#handleSearchFIRBtn" text="Search FIR" />
+                     </items>
+                  </SplitMenuButton>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane fx:id="aboutAnchorePane" prefHeight="200.0" prefWidth="1014.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="aboutContainer" layoutY="-1.0" prefHeight="533.0" prefWidth="1014.0" style="-fx-background-color: blue;" visible="false" />
+                  <VBox fx:id="AddFIRContainer" alignment="CENTER" layoutX="-2.0" layoutY="7.0" prefHeight="552.0" prefWidth="1020.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="488.0" prefWidth="805.0" spacing="4.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="45.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="F.I.R. ID:" wrappingWidth="98.68511962890625">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="FIRIDTF" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Station Name: " wrappingWidth="143.07992553710938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="stationNameTF" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" top="4.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="1014.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject: " wrappingWidth="97.2530517578125">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="subjectTF" prefHeight="29.0" prefWidth="425.0" />
+                                          <HBox prefHeight="33.0" prefWidth="89.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <HBox prefHeight="44.0" prefWidth="20.0" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint under ACT: " wrappingWidth="124.46281433105469">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="ACTTF" prefHeight="29.0" prefWidth="292.0" />
+                                          <HBox prefHeight="33.0" prefWidth="271.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " wrappingWidth="80.06794738769531">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="NameTF" prefHeight="29.0" prefWidth="174.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="288.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " wrappingWidth="84.36416625976562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="CityTF" prefHeight="29.0" prefWidth="181.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: " wrappingWidth="87.22840881347656">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="PhoneTF" prefHeight="29.0" prefWidth="184.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="286.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="85.79629516601562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="EmailTF" prefHeight="29.0" prefWidth="242.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " wrappingWidth="95.8209228515625">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <DatePicker fx:id="DateTF" prefHeight="26.0" prefWidth="221.0" />
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="294.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="97.0" prefWidth="1020.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Details: " wrappingWidth="115.87026977539062">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DetailsTF" prefHeight="72.0" prefWidth="538.0">
+                                             <HBox.margin>
+                                                <Insets bottom="8.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1020.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#handleAddSubmit" prefHeight="39.0" prefWidth="185.0" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="Submit">
+                                             <font>
+                                                <Font name="Arial Bold" size="21.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SearchFIRContainer" alignment="TOP_CENTER" prefHeight="597.0" prefWidth="1018.0" visible="false">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="1018.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="311.0" text="Search F.I.R." textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="SearchFIRTF" prefHeight="32.0" prefWidth="338.0" promptText="  FIR ID" style="-fx-background-radius: 23;">
+                                 <font>
+                                    <Font name="Menlo Regular" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <HBox alignment="CENTER" prefHeight="39.0" prefWidth="10.0" />
+                              <Button mnemonicParsing="false" onAction="#handleSearchSubmitBtn" prefHeight="31.0" prefWidth="108.0" style="-fx-background-radius: 30;" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="search">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="17.0" prefWidth="1018.0" />
+                        <Button fx:id="formContainer" mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css" visible="false">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="488.0" prefWidth="805.0" spacing="4.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="45.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="F.I.R. ID:" wrappingWidth="98.68511962890625">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="FIRIDTF1" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Station Name: " wrappingWidth="143.07992553710938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="StationNameTF1" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" top="4.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="1014.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject: " wrappingWidth="97.2530517578125">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="SubjectTF1" prefHeight="29.0" prefWidth="425.0" />
+                                          <HBox prefHeight="33.0" prefWidth="89.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <HBox prefHeight="44.0" prefWidth="20.0" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Complaint under ACT: " wrappingWidth="124.46281433105469">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="ACTTF1" prefHeight="29.0" prefWidth="292.0" />
+                                          <HBox prefHeight="33.0" prefWidth="271.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " wrappingWidth="80.06794738769531">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="NameTF1" prefHeight="29.0" prefWidth="174.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="288.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " wrappingWidth="84.36416625976562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="CityTF1" prefHeight="29.0" prefWidth="181.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: " wrappingWidth="87.22840881347656">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="PhoneTF1" prefHeight="29.0" prefWidth="184.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="286.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="85.79629516601562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="EmailTF1" prefHeight="29.0" prefWidth="242.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " wrappingWidth="93.02615356445312">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="DateTF1" prefHeight="29.0" prefWidth="184.0" />
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="332.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="97.0" prefWidth="1020.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Details: " wrappingWidth="115.87026977539062">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextArea fx:id="DetailsTF1" prefHeight="72.0" prefWidth="538.0">
+                                             <HBox.margin>
+                                                <Insets bottom="8.0" top="10.0" />
+                                             </HBox.margin>
+                                          </TextArea>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1020.0" />
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

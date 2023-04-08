@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="631.0" prefWidth="1014.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.Criminals.CriminalsController">
+   <children>
+      <BorderPane prefHeight="631.0" prefWidth="1014.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1018.0" spacing="490.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <SplitMenuButton fx:id="OptionBtn" mnemonicParsing="false" onAction="#handleOptionBtn" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="Option">
+                     <items>
+                        <MenuItem fx:id="AddCriminalBtn" mnemonicParsing="false" onAction="#handleAddCriminalBtn" text="Add Criminal" />
+                        <MenuItem fx:id="SearchCriminalBtn" mnemonicParsing="false" onAction="#handleSearchCriminalBtn" text="Search Criminal" />
+                     </items>
+                  </SplitMenuButton>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane fx:id="aboutAnchorePane" prefHeight="200.0" prefWidth="1014.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="aboutContainer" layoutY="-1.0" prefHeight="533.0" prefWidth="1014.0" style="-fx-background-color: blue;" visible="false" />
+                  <VBox fx:id="AddCriminalContainer" alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="560.0" prefWidth="1020.0" visible="false">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="488.0" prefWidth="805.0" spacing="4.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="45.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Criminal ID:" wrappingWidth="109.18038940429688">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="criminalIDTF" prefHeight="29.0" prefWidth="172.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Station Name: " wrappingWidth="143.07992553710938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="StationNameTF" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" top="4.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="1014.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject: " wrappingWidth="97.2530517578125">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="SubjectTF" prefHeight="29.0" prefWidth="425.0" />
+                                          <HBox prefHeight="33.0" prefWidth="89.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <HBox prefHeight="44.0" prefWidth="20.0" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrested under ACT: " wrappingWidth="124.46281433105469">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="ACTTF" prefHeight="29.0" prefWidth="292.0" />
+                                          <HBox prefHeight="33.0" prefWidth="271.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " wrappingWidth="80.06794738769531">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="NameTF" prefHeight="29.0" prefWidth="174.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="288.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " wrappingWidth="84.36416625976562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="CityTF" prefHeight="29.0" prefWidth="181.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: " wrappingWidth="87.22840881347656">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="PhoneTF" prefHeight="29.0" prefWidth="184.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="286.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="85.79629516601562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="EmailTF" prefHeight="29.0" prefWidth="242.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="47.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="337.0" spacing="15.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrest Date: " wrappingWidth="116.81147766113281">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker fx:id="ArrestDateTF" prefHeight="26.0" prefWidth="178.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="330.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date: " wrappingWidth="134.30355834960938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <DatePicker fx:id="ReleaseDateTF" prefHeight="26.0" prefWidth="221.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="50.0" prefWidth="815.0" spacing="45.0">
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="45.0" prefWidth="354.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Marital Status:" wrappingWidth="142.41542053222656">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <ChoiceBox fx:id="MaritalStatusTF" prefHeight="27.0" prefWidth="189.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: " wrappingWidth="143.07992553710938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <ChoiceBox fx:id="GenderTF" prefHeight="27.0" prefWidth="167.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="815.0">
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="43.0" prefWidth="203.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:" wrappingWidth="86.44061279296875">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="WeightTF" prefHeight="29.0" prefWidth="67.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="43.0" prefWidth="196.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" wrappingWidth="100.43431091308594">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="HeightTF" prefHeight="29.0" prefWidth="69.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="45.0" prefWidth="336.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Occupation:" wrappingWidth="130.1709442138672">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="OccupationTF" prefHeight="29.0" prefWidth="172.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1020.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#handleSubmit" prefHeight="39.0" prefWidth="185.0" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="Submit">
+                                             <font>
+                                                <Font name="Arial Bold" size="21.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="SearchCriminalContainer" alignment="TOP_CENTER" layoutY="-4.0" prefHeight="601.0" prefWidth="1018.0" visible="false">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="1018.0">
+                           <children>
+                              <Label prefHeight="36.0" prefWidth="311.0" text="Search Criminal" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="searchCriminalIDTF1" prefHeight="32.0" prefWidth="338.0" promptText="  Criminal ID" style="-fx-background-radius: 23;">
+                                 <font>
+                                    <Font name="Menlo Regular" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <HBox prefHeight="39.0" prefWidth="15.0" />
+                              <Button mnemonicParsing="false" onAction="#handleSearchCriminalIDBtn" prefHeight="39.0" prefWidth="111.0" style="-fx-background-radius: 25;" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="search">
+                                 <font>
+                                    <Font name="Arial" size="21.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="17.0" prefWidth="1018.0" />
+                        <Button fx:id="formContainer" mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css" visible="false">
+                           <graphic>
+                              <VBox alignment="CENTER" prefHeight="488.0" prefWidth="805.0" spacing="4.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="45.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Criminal ID:" wrappingWidth="109.18038940429688">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="CriminalIDTF1" prefHeight="29.0" prefWidth="172.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Station Name: " wrappingWidth="143.07992553710938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="StationNameTF1" prefHeight="29.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" top="4.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="1014.0">
+                                       <children>
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject: " wrappingWidth="97.2530517578125">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="SubjectTF1" prefHeight="29.0" prefWidth="425.0" />
+                                          <HBox prefHeight="33.0" prefWidth="89.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="40.0" prefWidth="1020.0">
+                                       <children>
+                                          <HBox prefHeight="44.0" prefWidth="20.0" />
+                                          <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrested under ACT: " wrappingWidth="124.46281433105469">
+                                             <font>
+                                                <Font name="Arial Bold" size="19.0" />
+                                             </font>
+                                          </Text>
+                                          <TextField fx:id="ACTTF1" prefHeight="29.0" prefWidth="292.0" />
+                                          <HBox prefHeight="33.0" prefWidth="271.0" />
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="100.0" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Name: " wrappingWidth="80.06794738769531">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="NameTF1" prefHeight="29.0" prefWidth="174.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="288.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="City: " wrappingWidth="84.36416625976562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="CityTF1" prefHeight="29.0" prefWidth="181.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="38.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="303.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone: " wrappingWidth="87.22840881347656">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="PhoneTF1" prefHeight="29.0" prefWidth="184.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="286.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="85.79629516601562">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="EmailTF1" prefHeight="29.0" prefWidth="242.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" spacing="47.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="337.0" spacing="15.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrest Date: " wrappingWidth="116.81147766113281">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="ArrestDateTF1" prefHeight="29.0" prefWidth="181.0" />
+                                             </children></HBox>
+                                          <HBox alignment="CENTER" prefHeight="33.0" prefWidth="330.0" spacing="10.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Release Date: " wrappingWidth="134.30355834960938">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="ReleaseDateTF1" prefHeight="29.0" prefWidth="179.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="235.0" prefHeight="50.0" prefWidth="815.0" spacing="45.0">
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="45.0" prefWidth="354.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Marital Status:" wrappingWidth="138.9641876220703">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="MaritalStatusTF1" prefHeight="29.0" prefWidth="212.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="39.0" prefWidth="309.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender: " wrappingWidth="125.82382202148438">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="GenderTF1" prefHeight="29.0" prefWidth="181.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="815.0">
+                                       <padding>
+                                          <Insets bottom="7.0" />
+                                       </padding>
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="43.0" prefWidth="203.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Weight:" wrappingWidth="86.44061279296875">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="WeightTF1" prefHeight="29.0" prefWidth="67.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="43.0" prefWidth="196.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" wrappingWidth="100.43431091308594">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="HeightTF1" prefHeight="29.0" prefWidth="69.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="45.0" prefWidth="336.0">
+                                             <children>
+                                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Occupation:" wrappingWidth="130.1709442138672">
+                                                   <font>
+                                                      <Font name="Arial Bold" size="19.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="OccupationTF1" prefHeight="29.0" prefWidth="172.0" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1020.0" />
+                                 </children>
+                              </VBox>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
