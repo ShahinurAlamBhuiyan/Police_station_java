@@ -75,7 +75,7 @@
                                  <children>
                                     <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../../../../Completed/NTStock/src/main/resources/Image/icons/male-user.png" />
+                                          <Image url="@../Image/icons/male-user.png" />
                                        </image>
                                     </ImageView>
                                     <VBox prefHeight="71.0" prefWidth="122.0">
