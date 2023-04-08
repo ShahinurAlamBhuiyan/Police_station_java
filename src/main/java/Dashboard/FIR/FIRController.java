@@ -34,7 +34,7 @@ public class FIRController {
     private TextField DateTF1;
 
     @FXML
-    private TextArea DetailsTF;
+    private TextField DetailsTF;
     @FXML
     private TextArea DetailsTF1;
     @FXML

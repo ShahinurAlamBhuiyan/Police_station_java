@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
@@ -27,6 +28,9 @@
                         <MenuItem fx:id="AddFIRBtn" mnemonicParsing="false" onAction="#handleAddFIRBtn" text="Add FIR" />
                         <MenuItem fx:id="SearchFIRBtn" mnemonicParsing="false" onAction="#handleSearchFIRBtn" text="Search FIR" />
                      </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </SplitMenuButton>
                </children>
             </HBox>
@@ -34,7 +38,23 @@
          <center>
             <AnchorPane fx:id="aboutAnchorePane" prefHeight="200.0" prefWidth="1014.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox fx:id="aboutContainer" layoutY="-1.0" prefHeight="533.0" prefWidth="1014.0" style="-fx-background-color: blue;" visible="false" />
+                  <VBox fx:id="aboutContainer" layoutX="29.0" layoutY="24.0" prefHeight="533.0" prefWidth="965.0">
+                     <children>
+                        <AnchorPane prefHeight="535.0" prefWidth="965.0">
+                           <children>
+                              <Text fill="WHITE" layoutX="187.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F.I.R (  First Information Report )" wrappingWidth="606.2725982666016">
+                                 <font>
+                                    <Font name="Arial Bold" size="39.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="33.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FIR is a legal document used in Bangladesh to report the commission of a crime to the police. It serves as the first step in the criminal justice system and enables the police to initiate an investigation into the alleged crime. The F.I.R. includes details such as the name of the complainant, the nature of the offense, the time and place of the incident, and the names of any suspects or witnesses. Filing an F.I.R. is a crucial step in seeking justice for victims of crime in Bangladesh." textAlignment="JUSTIFY" wrappingWidth="897.7337478981634">
+                                 <font>
+                                    <Font name="Arial" size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children></VBox>
                   <VBox fx:id="AddFIRContainer" alignment="CENTER" layoutX="-2.0" layoutY="7.0" prefHeight="552.0" prefWidth="1020.0" visible="false">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css">
@@ -175,11 +195,7 @@
                                                 <Font name="Arial Bold" size="19.0" />
                                              </font>
                                           </Text>
-                                          <TextArea fx:id="DetailsTF" prefHeight="72.0" prefWidth="538.0">
-                                             <HBox.margin>
-                                                <Insets bottom="8.0" top="10.0" />
-                                             </HBox.margin>
-                                          </TextArea>
+                                          <TextField fx:id="DetailsTF" prefHeight="57.0" prefWidth="540.0" />
                                        </children>
                                        <padding>
                                           <Insets bottom="7.0" />
@@ -191,6 +207,9 @@
                                              <font>
                                                 <Font name="Arial Bold" size="21.0" />
                                              </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
                                           </Button>
                                        </children>
                                     </HBox>
@@ -219,6 +238,9 @@
                                  <font>
                                     <Font name="Arial" size="16.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </Button>
                            </children>
                         </HBox>

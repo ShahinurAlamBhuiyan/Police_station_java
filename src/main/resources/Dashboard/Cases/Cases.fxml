@@ -28,6 +28,9 @@
                         <MenuItem fx:id="AddCaseBtn" mnemonicParsing="false" onAction="#handleAddCaseBtn" text="Add Case" />
                         <MenuItem fx:id="SearchCaseBtn" mnemonicParsing="false" onAction="#handleSearchCaseBtn" text="Search Case" />
                      </items>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </SplitMenuButton>
                </children>
             </HBox>
@@ -35,7 +38,26 @@
          <center>
             <AnchorPane fx:id="aboutAnchorePane" prefHeight="200.0" prefWidth="1014.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox fx:id="aboutContainer" layoutY="-1.0" prefHeight="533.0" prefWidth="1014.0" style="-fx-background-color: blue;" visible="false" />
+                  <VBox fx:id="aboutContainer" layoutX="16.0" layoutY="17.0" prefHeight="533.0" prefWidth="975.0">
+                     <children>
+                        <AnchorPane prefHeight="533.0" prefWidth="1018.0">
+                           <children>
+                              <Text fill="WHITE" layoutX="402.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CASE" wrappingWidth="126.42454528808594">
+                                 <font>
+                                    <Font name="Arial Bold" size="39.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="33.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A case in a police station refers to a report or complaint that is filed with the police regarding a crime or incident. When someone reports a crime or incident, the police will create a case file that contains all relevant information such as the name of the complainant, the nature of the offense, the date and time of the incident, and any witnesses or evidence.Once a case is filed, the police will conduct an investigation to gather more information and evidence. Depending on the severity of the case, the police may make arrests, conduct searches, and question witnesses. The case will be documented in the police station's records and will be used in any subsequent legal proceedings." textAlignment="JUSTIFY" wrappingWidth="897.7337478981634">
+                                 <font>
+                                    <Font name="Arial" size="33.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></VBox>
                   <VBox fx:id="AddCaseContainer" alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="560.0" prefWidth="1020.0" visible="false">
                      <children>
                         <Button mnemonicParsing="false" prefHeight="497.0" prefWidth="832.0" styleClass="dashboard-form-container" stylesheets="@../../style.css">
@@ -143,6 +165,9 @@
                                              <font>
                                                 <Font name="Arial Bold" size="21.0" />
                                              </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
                                           </Button>
                                        </children>
                                     </HBox>
