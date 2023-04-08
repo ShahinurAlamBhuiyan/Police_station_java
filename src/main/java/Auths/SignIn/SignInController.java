@@ -1,7 +1,6 @@
 package Auths.SignIn;
 
 import Auths.SignUp.SignUpController;
-import Dashboard.DashboardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,10 +12,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 import static Auths.SignUp.SignUp.*;
 public class SignInController {
@@ -30,40 +28,46 @@ public class SignInController {
     private TextField usernameTF;
 
 
-//    public String userRandomId=null;
-//    public String userEmail = null;
-
-
     @FXML
     void handleSignIn(ActionEvent event) throws IOException {
-        ArrayList<UserInformation> allUserInfo = new ArrayList<UserInformation>();
-        if(((!usernameTF.getText().equals(""))) && (!passwordTF.getText().equals(""))){
 
-            boolean isMatch = false;
-            try{
-                File file  = new File("AllTextFile/AllPolice/AllPolice.txt");
-                Scanner fileReader = new Scanner(file);
-                while(fileReader.hasNext())
-                {
-                    allUserInfo.add(new UserInformation(fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(), fileReader.next(),fileReader.next()));
+        String fileName = "AllTextFile/AllPolice/AllPolice.txt";
+        String line;
+        String[] data;
+        boolean isSuccess = false;
+
+        try {
+            FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            String usernameTf = usernameTF.getText();
+            String passwordTf = passwordTF.getText();
+            while ((line = bufferedReader.readLine()) != null) {
+                data = line.split("\\]\\[");
+
+                String username =data[0].substring(1).trim();
+                String password = data[1].trim();
+                if(username.equals(usernameTf) && password.equals(passwordTf)) {
+                    String designation = data[2].trim();
+                    String firstname = data[3].trim();
+                    String lastname = data[4].trim();
+                    String policeStationId = data[5].trim();
+                    String phone = data[6].trim();
+                    System.out.println("Field 1: " + username);
+                    System.out.println("Field 2: " + password);
+                    System.out.println("Field 3: " + designation);
+                    System.out.println("Field 4: " + firstname);
+                    System.out.println("Field 5: " + lastname);
+                    System.out.println("Field 6: " + policeStationId);
+                    System.out.println("Field 7: " + phone);
+                    isSuccess = true;
+                    loggedInUserFullName = firstname  + " " + lastname;
+                    loggedInUserDesignation = designation;
+                    loggedInUsername = username;
+                    break;
                 }
-
-                for(UserInformation user : allUserInfo){
-                    if(user.getUsername().equals(usernameTF.getText()) && user.getPassword().equals(passwordTF.getText())){
-                        isMatch = true;
-                        loggedInUserFullName = user.getFirstName()  + " " + user.getLastName();
-                        loggedInUserDesignation = user.getDesignation();
-                        loggedInUsername = user.getUsername();
-                        break;
-                    }
-                }
-
-            }catch(Exception e){
-                System.out.println("Something went wrong. SignInController 62 line.");
-                e.printStackTrace();
             }
 
-            if(isMatch== true){
+            if(isSuccess){
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Congratulations!");
                 alert.setContentText("Successfully logged in.");
@@ -75,7 +79,12 @@ public class SignInController {
                 alert.setContentText("Please, check your username and password.");
                 alert.showAndWait();
             }
+
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
 
     }
 
@@ -83,10 +92,6 @@ public class SignInController {
         try {
             FXMLScene scene = FXMLScene.load("/Dashboard/Dashboard.fxml");
             Parent root = scene.root;
-            // sending data for dashboard. --------------------------------
-//            DashboardController dashboardsController = (DashboardController) scene.controller;
-//            dashboardsController.setSignedUserInfo(role,userEmailTF.getText(), userRandomId);
-//            dashboardsController.handleSidebar();
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Police Station");

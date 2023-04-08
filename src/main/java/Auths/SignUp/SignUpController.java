@@ -1,7 +1,6 @@
 package Auths.SignUp;
 
 import Auths.SignIn.SignInController;
-import Dashboard.DashboardController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,8 +13,6 @@ import javafx.fxml.Initializable;
 
 import java.io.FileWriter;
 import java.net.URL;
-import java.time.LocalDate;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class SignUpController implements Initializable{
@@ -25,7 +22,7 @@ public class SignUpController implements Initializable{
 
     @FXML
     private ChoiceBox<String> designationTypeChoiceBox;
-    private String[] designations = {"Inspector", "Sub-Inspector", "Sergeant", "Assistant-Sub-Inspector", "Nayek", "Constable"};
+    private String[] designations = {"Inspector", "Sub-Inspector", "Sergeant", "Assistant Sub-Inspector", "Nayek", "Constable"};
 
     @FXML
     private TextField PSIDTField;
@@ -60,10 +57,10 @@ public class SignUpController implements Initializable{
 
             try{
                 FileWriter writer1 = new FileWriter(AllUserPath, true);
-                writer1.write(usernameTField.getText() + " " + passwordTField.getText() + " " +
-                        designationTypeChoiceBox.getValue() + " " + firstNameTField.getText() + " " +  lastNameTField.getText() + " " + PSIDTField.getText()+
-                        " " + mobileTField.getText()+"\n");
-
+                String UserLine = "["+usernameTField.getText() + "][" + passwordTField.getText() + "][" +
+                        designationTypeChoiceBox.getValue() + "][" + firstNameTField.getText() + "][" +  lastNameTField.getText() + "][" + PSIDTField.getText()+
+                        "][" + mobileTField.getText()+"]\n";
+                writer1.write(UserLine);
 
                 writer1.close();
                 System.out.println("Add successfully");
