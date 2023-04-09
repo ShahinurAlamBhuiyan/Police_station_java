@@ -15,9 +15,9 @@
 
 <AnchorPane prefHeight="700.0" prefWidth="1250.0" styleClass="primary-background" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dashboard.DashboardController">
    <children>
-      <BorderPane fx:id="DashboardBorderPane" prefHeight="700.0" prefWidth="1250.0">
+      <BorderPane fx:id="DashboardBorderPane" prefHeight="700.0" prefWidth="1250.0" style="-fx-background-color: teal;">
          <left>
-            <AnchorPane prefHeight="677.0" prefWidth="240.0" style="-fx-background-color: #943056;" BorderPane.alignment="CENTER">
+            <AnchorPane prefHeight="677.0" prefWidth="240.0" style="-fx-background-color: teal;" BorderPane.alignment="CENTER">
                <children>
                   <VBox alignment="CENTER" layoutY="-1.0" prefHeight="325.0" prefWidth="245.0" spacing="17.0">
                      <children>
@@ -64,7 +64,7 @@
          <top>
             <HBox prefHeight="90.0" prefWidth="1250.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane prefHeight="102.0" prefWidth="246.0" style="-fx-background-color: #943056;">
+                  <AnchorPane prefHeight="102.0" prefWidth="246.0" style="-fx-background-color: teal;">
                      <children>
                         <Button layoutY="-3.0" mnemonicParsing="false" onAction="#handleShowProfileBtn" opacity="0.58" prefHeight="80.0" prefWidth="246.0" style="-fx-background-color: #142521;" styleClass="sidebar" textFill="#01a13c">
                            <cursor>
@@ -129,7 +129,12 @@
          <center>
             <AnchorPane prefHeight="598.0" prefWidth="990.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button disable="true" layoutX="100.0" layoutY="170.0" mnemonicParsing="false" opacity="0.58" prefHeight="172.0" prefWidth="756.0" style="-fx-background-color: #142521;" styleClass="sidebar" textFill="#f5f5f5" textOverrun="CENTER_ELLIPSIS">
+                  <ImageView fitHeight="604.0" fitWidth="1008.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../Image/policeStation.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Button disable="true" layoutX="142.0" layoutY="157.0" mnemonicParsing="false" opacity="0.58" prefHeight="172.0" prefWidth="756.0" style="-fx-background-color: #142521;" styleClass="sidebar" textFill="#f5f5f5" textOverrun="CENTER_ELLIPSIS">
                      <font>
                         <Font name="Arial Bold" size="25.0" />
                      </font>
@@ -137,7 +142,7 @@
                         <Cursor fx:constant="WAIT" />
                      </cursor>
                   </Button>
-                  <Label fx:id="welcomeLebel" layoutX="234.0" layoutY="212.0" prefHeight="87.0" prefWidth="505.0" text="Welcome to Police Station" textFill="WHITE">
+                  <Label fx:id="welcomeLebel" layoutX="278.0" layoutY="202.0" prefHeight="87.0" prefWidth="505.0" text="Welcome to Police Station" textFill="WHITE">
                      <font>
                         <Font name="Arial Bold" size="39.0" />
                      </font>
