@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FrontPage.FrontPageController">
+   <children>
+      <Pane prefHeight="700.0" prefWidth="1250.0">
+         <children>
+            <ImageView fitHeight="700.0" fitWidth="1254.0" layoutX="-3.0" pickOnBounds="true" style="-fx-opacity: 0.6;">
+               <image>
+                  <Image url="@../Image/policeStation.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="372.0" layoutY="86.0" prefHeight="55.0" prefWidth="546.0" style="-fx-background-color: rgba(30,30,30,0.5);" text="Welcome to Police Station" textFill="#28e4eb">
+         <font>
+            <Font name="Arial Bold" size="41.0" />
+         </font>
+      </Label>
+      <Button layoutX="474.0" layoutY="366.0" mnemonicParsing="false" onAction="#handleLoginUser" prefHeight="56.0" prefWidth="328.0" style="-fx-background-color: TEAL; -fx-background-radius: 12;" text="Login as an User" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="471.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleLoginPolice" prefHeight="56.0" prefWidth="328.0" style="-fx-background-color: TEAL; -fx-background-radius: 12;" text="Login as a Police" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="68.0" layoutY="567.0" prefHeight="55.0" prefWidth="460.0" style="-fx-background-color: rgba(30,30,30,0.5);" text="&quot;Police officers are not just " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="526.0" layoutY="567.0" prefHeight="55.0" prefWidth="463.0" style="-fx-background-color: rgba(30,30,30,0.5);" text="law enforcers, they are also " textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="622.0" prefHeight="55.0" prefWidth="508.0" style="-fx-background-color: rgba(30,30,30,0.5);" text="problem solvers, peacekeepers" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="643.0" layoutY="622.0" prefHeight="54.0" prefWidth="578.0" style="-fx-background-color: rgba(30,30,30,0.5);" text="and guardians of our communities.&quot;" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

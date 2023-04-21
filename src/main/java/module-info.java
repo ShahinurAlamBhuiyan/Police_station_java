@@ -3,11 +3,17 @@ module com.example.policestation {
     requires javafx.fxml;
 
 
+    opens FrontPage to javafx.fxml;
+    exports FrontPage;
+
     opens Auths.SignIn to javafx.fxml;
     exports Auths.SignIn;
 
     opens Auths.SignUp to javafx.fxml;
     exports Auths.SignUp;
+
+    opens UserAuths to javafx.fxml;
+    exports UserAuths;
 
     opens Dashboard to javafx.fxml;
     exports Dashboard;

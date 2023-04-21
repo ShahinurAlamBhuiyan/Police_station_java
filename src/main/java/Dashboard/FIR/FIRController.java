@@ -12,8 +12,6 @@ import java.io.IOException;
 
 public class FIRController {
     @FXML
-    private SplitMenuButton FIROptionBtn;
-    @FXML
     private TextField ACTTF;
     @FXML
     private TextField ACTTF1;
@@ -50,9 +48,6 @@ public class FIRController {
     @FXML
     private TextField PhoneTF1;
     @FXML
-    private TextField searchProductTF;
-
-    @FXML
     private TextField stationNameTF;
     @FXML
     private TextField SearchFIRTF;
@@ -74,16 +69,10 @@ public class FIRController {
     private Button formContainer;
 
 
-    @FXML
-    void handleFIROptionBtn(ActionEvent event) {
-        aboutContainer.setVisible(true);
-        SearchFIRContainer.setVisible(false);
-        AddFIRContainer.setVisible(false);
-    }
+
 
     @FXML
     void handleAddFIRBtn(ActionEvent event) {
-        FIROptionBtn.setText("Add FIR");
         AddFIRContainer.setVisible(true);
         SearchFIRContainer.setVisible(false);
         aboutContainer.setVisible(false);
@@ -91,7 +80,6 @@ public class FIRController {
 
     @FXML
     void handleSearchFIRBtn(ActionEvent event) {
-        FIROptionBtn.setText("Search FIR");
         SearchFIRContainer.setVisible(true);
         aboutContainer.setVisible(false);
         AddFIRContainer.setVisible(false);

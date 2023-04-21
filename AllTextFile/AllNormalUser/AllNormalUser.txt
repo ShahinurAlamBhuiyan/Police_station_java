@@ -1,0 +1,4 @@
+[username][password][occupation][firstname][lastname][nid][mobile]
+[test][test][Student][test][testt][676787][6543566]
+[test1][test1][test][test1][test][6544567543][5435676543]
+[test2][test2][dfs][test2][test2][6545654][54345]

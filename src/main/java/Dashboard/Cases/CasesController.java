@@ -16,8 +16,6 @@ import java.util.ResourceBundle;
 
 public class CasesController implements Initializable {
 
-    @FXML
-    private MenuItem AddCaseBtn;
 
     @FXML
     private VBox AddCaseContainer;
@@ -56,17 +54,11 @@ public class CasesController implements Initializable {
     @FXML
     private TextField searchCaseIdTF;
 
-    @FXML
-    private SplitMenuButton OptionBtn;
 
-    @FXML
-    private MenuItem SearchCaseBtn;
 
     @FXML
     private VBox SearchCaseContainer;
 
-    @FXML
-    private AnchorPane aboutAnchorePane;
 
     @FXML
     private VBox aboutContainer;
@@ -76,23 +68,14 @@ public class CasesController implements Initializable {
 
     @FXML
     void handleAddCaseBtn(ActionEvent event) {
-        OptionBtn.setText("Add Case");
         AddCaseContainer.setVisible(true);
         SearchCaseContainer.setVisible(false);
         aboutContainer.setVisible(false);
     }
 
-    @FXML
-    void handleOptionBtn(ActionEvent event) {
-        System.out.println("Option");
-        aboutContainer.setVisible(true);
-        SearchCaseContainer.setVisible(false);
-        AddCaseContainer.setVisible(false);
-    }
 
     @FXML
     void handleSearchCaseBtn(ActionEvent event) {
-        OptionBtn.setText("Search Case");
         SearchCaseContainer.setVisible(true);
         aboutContainer.setVisible(false);
         AddCaseContainer.setVisible(false);

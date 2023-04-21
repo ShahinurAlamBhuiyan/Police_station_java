@@ -6,8 +6,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -20,18 +18,14 @@
    <children>
       <BorderPane prefHeight="631.0" prefWidth="1014.0">
          <top>
-            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="1018.0" spacing="490.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="1018.0" spacing="490.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" />
-                  <SplitMenuButton fx:id="OptionBtn" mnemonicParsing="false" onAction="#handleOptionBtn" styleClass="auth-buttons-color" stylesheets="@../../style.css" text="Option">
-                     <items>
-                        <MenuItem fx:id="AddCriminalBtn" mnemonicParsing="false" onAction="#handleAddCriminalBtn" text="Add Criminal" />
-                        <MenuItem fx:id="SearchCriminalBtn" mnemonicParsing="false" onAction="#handleSearchCriminalBtn" text="Search Criminal" />
-                     </items>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </SplitMenuButton>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="AddCriminalBtn" mnemonicParsing="false" onAction="#handleAddCriminalBtn" text="Add Criminal" />
+                        <Button fx:id="SearchCriminalBtn" mnemonicParsing="false" onAction="#handleSearchCriminalBtn" text="Search Criminal" />
+                     </children>
+                  </HBox>
                </children>
             </HBox>
          </top>

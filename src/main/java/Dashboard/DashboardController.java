@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -16,8 +17,9 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static Auths.SignUp.SignUp.*;
+//import static Auths.SignUp.SignUp.*;
 
+import static FrontPage.FrontPageController.*;
 public class DashboardController  implements Initializable {
     private Stage stage;
     private Scene scene;
@@ -34,6 +36,10 @@ public class DashboardController  implements Initializable {
 
     @FXML
     private Label UserNameLabel;
+    @FXML
+    private Button criminalBtn;
+
+
 
     @FXML
     void handleCases(ActionEvent event) {
@@ -99,6 +105,11 @@ public class DashboardController  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        if(loggedInUserRole.equals("police")){
+            criminalBtn.setVisible(true);
+        }else{
+            criminalBtn.setVisible(false);
+        }
         UserDesignation.setText(loggedInUserDesignation);
         UserFullName.setText(loggedInUserFullName);
         UserNameLabel.setText(loggedInUsername);

@@ -29,7 +29,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleCriminals" opacity="0.57" prefHeight="55.0" prefWidth="200.0" styleClass="sidebar-buttons-color" stylesheets="@../style.css" text="Criminals" textFill="#dac4c4">
+                        <Button mnemonicParsing="false" onAction="#handleCases" opacity="0.57" prefHeight="55.0" prefWidth="200.0" styleClass="sidebar-buttons-color" stylesheets="@../style.css" text="Cases" textFill="#dac4c4">
                            <font>
                               <Font name="Arial Bold" size="25.0" />
                            </font>
@@ -37,7 +37,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleCases" opacity="0.57" prefHeight="55.0" prefWidth="200.0" styleClass="sidebar-buttons-color" stylesheets="@../style.css" text="Cases" textFill="#dac4c4">
+                        <Button fx:id="criminalBtn" mnemonicParsing="false" onAction="#handleCriminals" opacity="0.57" prefHeight="55.0" prefWidth="200.0" styleClass="sidebar-buttons-color" stylesheets="@../style.css" text="Criminals" textFill="#dac4c4" visible="false">
                            <font>
                               <Font name="Arial Bold" size="25.0" />
                            </font>

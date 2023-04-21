@@ -1,6 +1,7 @@
 package Auths.SignIn;
 
 import Auths.SignUp.SignUpController;
+import UserAuths.UserSignUpController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +17,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import static Auths.SignUp.SignUp.*;
+import static FrontPage.FrontPageController.*;
 public class SignInController {
     private Stage stage;
     private Scene scene;
@@ -30,8 +31,12 @@ public class SignInController {
 
     @FXML
     void handleSignIn(ActionEvent event) throws IOException {
-
-        String fileName = "AllTextFile/AllPolice/AllPolice.txt";
+        String fileName;
+        if(loggedInUserRole.equals("police")){
+            fileName = "AllTextFile/AllPolice/AllPolice.txt";
+        }else {
+            fileName = "AllTextFile/AllNormalUser/AllNormalUser.txt";
+        }
         String line;
         String[] data;
         boolean isSuccess = false;
@@ -103,17 +108,32 @@ public class SignInController {
 
     @FXML
     void switchToSignUp(ActionEvent event) {
-        try {
-            root = FXMLLoader.load(SignUpController.class.getResource("SignUp.fxml"));
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Police Station");
-            stage.show();
+        if(loggedInUserRole.equals("police")){
+            try {
+                root = FXMLLoader.load(SignUpController.class.getResource("SignUp.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("Police Station");
+                stage.show();
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }else{
+            try {
+                root = FXMLLoader.load(UserSignUpController.class.getResource("UserSignUp.fxml"));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("Police Station");
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
 }

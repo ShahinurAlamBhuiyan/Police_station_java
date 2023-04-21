@@ -21,7 +21,7 @@ public class CriminalsController implements Initializable {
     private TextField ACTTF1;
 
     @FXML
-    private MenuItem AddCriminalBtn;
+    private Button AddCriminalBtn;
 
     @FXML
     private VBox AddCriminalContainer;
@@ -66,8 +66,6 @@ public class CriminalsController implements Initializable {
     @FXML
     private TextField OccupationTF1;
 
-    @FXML
-    private SplitMenuButton OptionBtn;
 
     @FXML
     private TextField PhoneTF;
@@ -79,8 +77,6 @@ public class CriminalsController implements Initializable {
     @FXML
     private TextField ReleaseDateTF1;
 
-    @FXML
-    private MenuItem SearchCriminalBtn;
 
     @FXML
     private VBox SearchCriminalContainer;
@@ -100,8 +96,6 @@ public class CriminalsController implements Initializable {
     @FXML
     private TextField WeightTF1;
 
-    @FXML
-    private AnchorPane aboutAnchorePane;
 
     @FXML
     private VBox aboutContainer;
@@ -111,42 +105,25 @@ public class CriminalsController implements Initializable {
     @FXML
     private TextField CriminalIDTF1;
 
-    @FXML
-    private TextField searchProductTF;
-    @FXML
-    private TextField searchProductTF1;
 
     @FXML
     private TextField searchCriminalIDTF1;
 
-    @FXML
-    private ChoiceBox<?> userTypeChoiceBox;
-
-    @FXML
-    private ChoiceBox<?> userTypeChoiceBox1;
 
     @FXML
     private Button formContainer;
 
     @FXML
     void handleAddCriminalBtn(ActionEvent event) {
-        OptionBtn.setText("Add Criminal");
         AddCriminalContainer.setVisible(true);
         SearchCriminalContainer.setVisible(false);
         aboutContainer.setVisible(false);
     }
 
-    @FXML
-    void handleOptionBtn(ActionEvent event) {
-        System.out.println("Option");
-        aboutContainer.setVisible(true);
-        SearchCriminalContainer.setVisible(false);
-        AddCriminalContainer.setVisible(false);
-    }
+
 
     @FXML
     void handleSearchCriminalBtn(ActionEvent event) {
-        OptionBtn.setText("Search Criminal");
         SearchCriminalContainer.setVisible(true);
         aboutContainer.setVisible(false);
         AddCriminalContainer.setVisible(false);
